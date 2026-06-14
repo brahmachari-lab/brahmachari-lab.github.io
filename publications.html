@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Brahmachari Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Auto-open and scroll to a pub accordion when ?open=pub-XXXX is in the URL
+    window.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('open') || window.location.hash.slice(1);
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.open = true;
+      setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80);
+    });
+
+    function toggleBib(link) {
+      const block = link.closest('.pub-links').nextElementSibling;
+      block.classList.toggle('open');
+      link.textContent = block.classList.contains('open') ? 'Cite ×' : 'Cite';
+    }
+
+    function copySection(btn) {
+      const section = btn.closest('.cite-section');
+      const el = section.querySelector('.cite-plain, .cite-pre');
+      const text = el.innerText || el.textContent;
+      navigator.clipboard.writeText(text.trim()).then(function () {
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+      });
+    }
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">brahmachari<span>-lab</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="join.html">Join</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section>
+    <div class="section-label">Publications</div>
+    <h1>All publications</h1>
+  </section>
+
+  <section>
+
+    <p class="year-heading">2026</p>
+
+    <details class="pub-accordion" id="pub-2026-1">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Exploring the Energy Landscape of Bacterial Chromosome Segregation</div>
+          <div class="pub-badge">PNAS · 2026</div>
+          <div class="pub-auth-sm">S. Brahmachari, A.B. Oliveira Jr., M.F. Mello, V.G. Contessoto, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <div class="pub-abs"><img class="pub-fig" src="images/Brahmachari-etal-PNAS2026.png" alt="">We combine data-driven inference from Hi-C contact maps with a coarse-grained polymer energy landscape framework to model <em>E. coli</em> and <em>B. subtilis</em> chromosomes throughout their replication cycle. SMC-mediated lengthwise compaction drives a sharp mid-replication transition in which origin regions segregate toward opposite cell halves; in SMC-deficient mutants this is replaced by nematic-like alignment of sisters that impedes segregation and leaves a distinctive intersister Hi-C signature. These findings reveal that compaction geometry actively drives chromosome partition rather than merely accompanying it.</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1073/pnas.2535321123" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/41843667/" target="_blank">PubMed</a>
+        
+          <a href="publications/Brahmachari-etal-PNAS-2026.pdf">PDF</a>
+        <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block" id="bib-2026-1">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Oliveira AB Jr, Mello MF, et al. Exploring the Energy Landscape of Bacterial Chromosome Segregation. <em>Proc Natl Acad Sci USA</em>. 2026. doi:10.1073/pnas.2535321123</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2026bact,
+  author  = {Brahmachari, Sumitabha and Oliveira, A. B. and Mello, M. F. and Contessoto, V. G. and Onuchic, J. N.},
+  title   = {Exploring the Energy Landscape of Bacterial Chromosome Segregation},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2026},
+  doi     = {10.1073/pnas.2535321123}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion" id="pub-2026-2">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">A Data-Driven Chromatin Model Reveals Spatial and Dynamic Features of Genome Organization</div>
+          <div class="pub-badge">PNAS · 2026</div>
+          <div class="pub-auth-sm">A.B. Oliveira Jr., M.F. Mello, R.J. Oliveira, E. Dodero-Rojas, S. Brahmachari, V.G. Contessoto, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/oliveira-pnas2026.png" alt=""> -->
+        <p class="pub-abs">A data-driven chromatin model integrating machine learning with physical principles to simultaneously capture spatial organization and dynamic features of the genome across cell types.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1073/pnas.2530583123" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/41576073/" target="_blank">PubMed</a>
+        <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block" id="bib-2026-2">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Oliveira AB Jr, Mello MF, Oliveira RJ, et al. A Data-Driven Chromatin Model Reveals Spatial and Dynamic Features of Genome Organization. <em>Proc Natl Acad Sci USA</em>. 2026. doi:10.1073/pnas.2530583123</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Oliveira2026,
+  author  = {Oliveira, A. B. and Mello, M. F. and Oliveira, R. J. and Dodero-Rojas, E. and Brahmachari, S. and Contessoto, V. G. and Onuchic, J. N.},
+  title   = {A Data-Driven Chromatin Model Reveals Spatial and Dynamic Features of Genome Organization},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2026},
+  doi     = {10.1073/pnas.2530583123}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2025</p>
+
+    <details class="pub-accordion" id="pub-2025-1">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">DNA Supercoiling-Mediated G4/R-loop Formation Tunes Transcription by Controlling the Access of RNA Polymerase</div>
+          <div class="pub-badge">Nature Commun · 2025</div>
+          <div class="pub-auth-sm">J. Hwang, C.-Y. Lee, S. Brahmachari, S. Tripathi, T. Paul, H. Lee, A. Craig, T. Ha, and S. Myong</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <div class="pub-abs"><img class="pub-fig" src="images/Hwang-etal-NatureComm2025.png" alt="">Using single-molecule fluorescence experiments and theory, we show that negative supercoiling enhances transcription frequency nearly 10-fold by facilitating RNA polymerase (RNAP) loading at the promoter. Above a threshold, this activates cooperative formation of G-quadruplex and R-loop structures near the promoter that block further RNAP loading and rapidly suppress transcription. These results identify negative DNA supercoiling as a built-in topological spring driving a transcriptional burst followed by rapid self-suppression.</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1038/s41467-025-58479-x" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/40204744/" target="_blank">PubMed</a>
+        
+          <a href="publications/Hwang-etal-NatComm-2025.pdf">PDF</a>
+        <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block" id="bib-2025-1">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Hwang J, Lee CY, Brahmachari S, et al. DNA Supercoiling-Mediated G4/R-loop Formation Tunes Transcription by Controlling the Access of RNA Polymerase. <em>Nat Commun</em>. 2025. doi:10.1038/s41467-025-58479-x</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Hwang2025,
+  author  = {Hwang, J. and Lee, C.-Y. and Brahmachari, S. and Tripathi, S. and Paul, T. and Lee, H. and Craig, A. and Ha, T. and Myong, S.},
+  title   = {{DNA} Supercoiling-Mediated {G4/R}-loop Formation Tunes Transcription by Controlling the Access of {RNA} Polymerase},
+  journal = {Nature Communications},
+  year    = {2025},
+  doi     = {10.1038/s41467-025-58479-x}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion" id="pub-2025-2">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Energy Landscape Analysis of the Development of the Chromosome Structure Across the Cell Cycle</div>
+          <div class="pub-badge">PNAS · 2025</div>
+          <div class="pub-auth-sm">V.G. Contessoto, A.B. Oliveira Jr., S. Brahmachari, P.G. Wolynes, M. Di Pierro, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/contessoto-pnas2025.png" alt=""> -->
+        <p class="pub-abs">Energy landscape theory reveals how chromosome structure evolves through cell cycle stages — from interphase to mitosis and back — by tracking how the free energy landscape reshapes under changing concentrations of architectural proteins.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1073/pnas.2425225122" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/40112110/" target="_blank">PubMed</a>
+        <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block" id="bib-2025-2">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Contessoto VG, Oliveira AB Jr, Brahmachari S, et al. Energy Landscape Analysis of the Development of the Chromosome Structure Across the Cell Cycle. <em>Proc Natl Acad Sci USA</em>. 2025. doi:10.1073/pnas.2425225122</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Contessoto2025,
+  author  = {Contessoto, V. G. and Oliveira, A. B. and Brahmachari, S. and Wolynes, P. G. and Di Pierro, M. and Onuchic, J. N.},
+  title   = {Energy Landscape Analysis of the Development of the Chromosome Structure Across the Cell Cycle},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2025},
+  doi     = {10.1073/pnas.2425225122}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2024</p>
+
+    <details class="pub-accordion" id="pub-2024-1">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Nucleosomes Play a Dual Role in Regulating Transcription Dynamics</div>
+          <div class="pub-badge">PNAS · 2024</div>
+          <div class="pub-auth-sm">S. Brahmachari, S. Tripathi, J.N. Onuchic, and H. Levine</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <div class="pub-abs"><img class="pub-fig" src="images/Brahmachari-etal-PNAS2024.png" alt="">We develop a statistical mechanics model of topology-constrained chromatin and find that nucleosomes reduce effective torsional stiffness through chiral structural transitions between distinct conformations. Stochastic simulations of RNAP translocation reveal a dual role for nucleosomes: steric barriers that impede RNAP motion in the gene body, yet torsional buffers whose chiral transitions lower the restoring torque and facilitate elongation. The competition between these effects produces bursting transcription dynamics whose frequency and duration are set by nucleosome density and disassembly kinetics.</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1073/pnas.2319772121" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/38968124/" target="_blank">PubMed</a>
+        
+          <a href="publications/Brahmachari-etal-PNAS-2024.pdf">PDF</a>
+        <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block" id="bib-2024-1">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Tripathi S, Onuchic JN, et al. Nucleosomes Play a Dual Role in Regulating Transcription Dynamics. <em>Proc Natl Acad Sci USA</em>. 2024. doi:10.1073/pnas.2319772121</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2024pnas,
+  author  = {Brahmachari, Sumitabha and Tripathi, S. and Onuchic, J. N. and Levine, H.},
+  title   = {Nucleosomes Play a Dual Role in Regulating Transcription Dynamics},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2024},
+  doi     = {10.1073/pnas.2319772121}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion" id="pub-2024-2">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Temporally Correlated Active Forces Drive Segregation and Enhanced Dynamics in Chromosome Polymers</div>
+          <div class="pub-badge">PRX Life · 2024</div>
+          <div class="pub-auth-sm">S. Brahmachari, T. Markovich, F.C. MacKintosh, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <div class="pub-abs"><img class="pub-fig" src="images/Brahmachari-etal-PRXLife2024.png" alt="">We model chromosomes as polymers subject to temporally persistent (colored) noise capturing motor-driven active forces, and find that activity drives correlated motion over long length scales and compaction into a globally collapsed, entangled globule. Heterogeneous activity leads to spatial segregation of highly dynamic loci from less dynamic ones, suggesting a role for activity gradients in chromosome compartmentalization. These results show that the temporal statistics of active noise — not just its amplitude — are critical determinants of chromosome structure and dynamics.</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1103/PRXLife.2.033003" target="_blank">DOI</a>
+        
+          <a href="publications/Brahmachari-etal-PRXLife-2024.pdf">PDF</a>
+        <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block" id="bib-2024-2">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Markovich T, MacKintosh FC, et al. Temporally Correlated Active Forces Drive Segregation and Enhanced Dynamics in Chromosome Polymers. <em>PRX Life</em>. 2024. doi:10.1103/PRXLife.2.033003</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2024prx,
+  author  = {Brahmachari, Sumitabha and Markovich, T. and MacKintosh, F. C. and Onuchic, J. N.},
+  title   = {Temporally Correlated Active Forces Drive Segregation and Enhanced Dynamics in Chromosome Polymers},
+  journal = {PRX Life},
+  year    = {2024},
+  doi     = {10.1103/PRXLife.2.033003}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2023</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Structural Reorganization and Relaxation Dynamics of Axially Stressed Chromosomes</div>
+          <div class="pub-badge">Biophysical Journal · 2023</div>
+          <div class="pub-auth-sm">B.S. Ruben, S. Brahmachari, V.G. Contessoto, R.R. Cheng, A.B. Oliveira Jr., M. Di Pierro, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/ruben-biophysj2023.png" alt=""> -->
+        <p class="pub-abs">Using a data-driven coarse-grained polymer model, we simulate axial stretching of human chromosomes and find that mitotic chromosomes are approximately 10-fold stiffer than interphase chromosomes, consistent with micromechanical measurements. Relaxation dynamics reveal that chromosomes are viscoelastic solids — liquid-like and viscous in interphase but solid-like in mitosis — with emergent stiffness arising from lengthwise compaction of chromatin loops. These results connect chromatin structural organization to the macroscopic mechanical properties of chromosomes across the cell cycle.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.bpj.2023.03.029" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/36960531/" target="_blank">PubMed</a>
+          <a href="publications/Ruben-etal-BiophysJ-2023.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Ruben BS, Brahmachari S, Contessoto VG, et al. Structural Reorganization and Relaxation Dynamics of Axially Stressed Chromosomes. <em>Biophys J</em>. 2023. doi:10.1016/j.bpj.2023.03.029</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Ruben2023,
+  author  = {Ruben, B. S. and Brahmachari, S. and Contessoto, V. G. and Cheng, R. R. and Oliveira, A. B. and Di Pierro, M. and Onuchic, J. N.},
+  title   = {Structural Reorganization and Relaxation Dynamics of Axially Stressed Chromosomes},
+  journal = {Biophysical Journal},
+  year    = {2023},
+  doi     = {10.1016/j.bpj.2023.03.029}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+        <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">PyMEGABASE: Predicting Cell-Type-Specific Structural Annotations of Chromosomes Using the Epigenome</div>
+          <div class="pub-badge">Journal of Molecular Biology · 2023</div>
+          <div class="pub-auth-sm">E. Dodero-Rojas, M.F. Mello, S. Brahmachari, A.B. Oliveira Jr., V.G. Contessoto, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/dodero-rojas-jmb2023.png" alt=""> -->
+        <p class="pub-abs">We present a statistical-mechanical model for stretched intertwined DNA molecules computing torque and extension as a function of catenation number and applied force, finding good agreement with available experimental data. The model predicts a catenation-dependent effective twist modulus distinct from single-DNA behavior, and finds that the post-buckling state consists of multiple small plectoneme structures with a salt-dependence opposite to that of single supercoiled DNAs. These results provide a quantitative framework for interpreting magnetic tweezers experiments on DNA braids and reveal how catenation alters buckled DNA topology.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.jmb.2023.168180" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/37302549/" target="_blank">PubMed</a>
+        
+          <a href="publications/DoderoRojas-etal-JMB-2023.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Dodero-Rojas E, Mello MF, Brahmachari S, et al. PyMEGABASE: Predicting Cell-Type-Specific Structural Annotations of Chromosomes Using the Epigenome. <em>J Mol Biol</em>. 2023. doi:10.1016/j.jmb.2023.168180</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{DoderoRojas2023,
+  author  = {Dodero-Rojas, E. and Mello, M. F. and Brahmachari, S. and Oliveira, A. B. and Contessoto, V. G. and Onuchic, J. N.},
+  title   = {{PyMEGABASE}: Predicting Cell-Type-Specific Structural Annotations of Chromosomes Using the Epigenome},
+  journal = {Journal of Molecular Biology},
+  year    = {2023},
+  doi     = {10.1016/j.jmb.2023.168180}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2022</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Shaping the Genome via Lengthwise Compaction, Phase Separation, and Lamina Adhesion</div>
+          <div class="pub-badge">Nucleic Acids Research · 2022</div>
+          <div class="pub-auth-sm">S. Brahmachari, V.G. Contessoto, M. Di Pierro, and J.N. Onuchic</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/brahmachari-nar2022.png" alt=""> -->
+        <p class="pub-abs">We build a coarse-grained polymer model of the genome incorporating three physically distinct interaction classes: lengthwise compaction by SMC complexes, self-adhesion among epigenetically similar segments (phase separation), and adhesion to the nuclear lamina. Their interplay is sufficient to recapitulate the full range of architectural variants observed across the tree of life, from loop-domain-dominated to compartment-dominated architectures. The model reveals how the balance between compaction and phase separation determines genome architecture type and how lamina adhesion constrains radial chromatin positioning.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1093/nar/gkac231" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/35420130/" target="_blank">PubMed</a>
+        
+          <a href="publications/Brahmachari-etal-NAR-2022.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Contessoto VG, Di Pierro M, et al. Shaping the Genome via Lengthwise Compaction, Phase Separation, and Lamina Adhesion. <em>Nucleic Acids Res</em>. 2022. doi:10.1093/nar/gkac231</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2022nar,
+  author  = {Brahmachari, Sumitabha and Contessoto, V. G. and Di Pierro, M. and Onuchic, J. N.},
+  title   = {Shaping the Genome via Lengthwise Compaction, Phase Separation, and Lamina Adhesion},
+  journal = {Nucleic Acids Research},
+  year    = {2022},
+  doi     = {10.1093/nar/gkac231}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">DNA Supercoiling-Mediated Collective Behavior of Co-Transcribing RNA Polymerases</div>
+          <div class="pub-badge">Nucleic Acids Research · 2022</div>
+          <div class="pub-auth-sm">S. Tripathi, S. Brahmachari, J.N. Onuchic, and H. Levine</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/tripathi-nar2022.png" alt=""> -->
+        <p class="pub-abs">We propose that co-transcribing RNA polymerases communicate through the torsional stress they generate in the shared DNA template, even when separated by large distances. Positive supercoiling generated downstream by a leading RNAP is relieved by negative supercoiling from a lagging RNAP, enabling cooperative elongation without direct contact. This supercoiling-mediated mechanism reproduces observed collective transcription behavior and predicts bursting dynamics arising from the nonlinear coupling between RNAP flux and DNA topology.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1093/nar/gkab1252" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/34951454/" target="_blank">PubMed</a>
+        
+          <a href="publications/Tripathi-etal-NAR-2022.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Tripathi S, Brahmachari S, Onuchic JN, et al. DNA Supercoiling-Mediated Collective Behavior of Co-Transcribing RNA Polymerases. <em>Nucleic Acids Res</em>. 2022. doi:10.1093/nar/gkab1252</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Tripathi2022,
+  author  = {Tripathi, S. and Brahmachari, S. and Onuchic, J. N. and Levine, H.},
+  title   = {{DNA} Supercoiling-Mediated Collective Behavior of Co-Transcribing {RNA} Polymerases},
+  journal = {Nucleic Acids Research},
+  year    = {2022},
+  doi     = {10.1093/nar/gkab1252}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2021</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">3D Genomics Across the Tree of Life Reveals Condensin II as a Determinant of Architecture Type</div>
+          <div class="pub-badge">Science · 2021</div>
+          <div class="pub-auth-sm">C. Hoencamp*, A.M.O. Elbatsh*, O. Dudchenko*, S. Brahmachari*, et al.</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <div class="pub-abs"><img class="pub-fig" src="images/Hoencamp-etal-Science2021.png" alt="">We generated Hi-C contact maps for 24 species spanning the tree of life, revealing that genomes fall into two broad architectural categories: loop-domain-dominated and compartment-dominated. Comparative genomics and functional perturbation experiments identify condensin II as the principal molecular determinant: species with condensin II form loop domains, while those lacking it are compartment-dominated. Depletion or introduction of condensin II shifts genome architecture accordingly, revealing a deep evolutionary link between condensin II, loop extrusion, and fundamental genome organization.</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1126/science.abe2218" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/34045355/" target="_blank">PubMed</a>
+        
+          <a href="publications/Hoencamp-etal-Science-2021.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Hoencamp C, Elbatsh AMO, Dudchenko O, Brahmachari S, et al. 3D Genomics Across the Tree of Life Reveals Condensin II as a Determinant of Architecture Type. <em>Science</em>. 2021. doi:10.1126/science.abe2218</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Hoencamp2021,
+  author  = {Hoencamp, C. and Elbatsh, A. M. O. and Dudchenko, O. and Brahmachari, S. and others},
+  title   = {{3D} Genomics Across the Tree of Life Reveals Condensin {II} as a Determinant of Architecture Type},
+  journal = {Science},
+  year    = {2021},
+  doi     = {10.1126/science.abe2218}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2020</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Coarse-Grained Modeling of DNA Plectoneme Formation in the Presence of Base-Pair Mismatches</div>
+          <div class="pub-badge">Nucleic Acids Research · 2020</div>
+          <div class="pub-auth-sm">P.R. Desai, S. Brahmachari, J.F. Marko, S. Das, and K.C. Neuman</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/desai-nar2020.png" alt=""> -->
+        <p class="pub-abs">We use coarse-grained molecular dynamics simulations to study plectoneme pinning at base-pair mismatch sites in supercoiled DNA. Even a single mismatched base pair acts as a soft mechanical defect that dramatically lowers the energy required to nucleate a kinked end-loop, pinning a plectoneme at that site, in quantitative agreement with magnetic tweezers experiments. These results provide a physical mechanism by which DNA supercoiling localizes to sites of damage, with implications for topological contributions to genome surveillance.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1093/nar/gkaa836" target="_blank">DOI</a>
+        
+          <a href="publications/Desai-etal-NAR-2020.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Desai PR, Brahmachari S, Marko JF, et al. Coarse-Grained Modeling of DNA Plectoneme Formation in the Presence of Base-Pair Mismatches. <em>Nucleic Acids Res</em>. 2020. doi:10.1093/nar/gkaa836</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Desai2020,
+  author  = {Desai, P. R. and Brahmachari, S. and Marko, J. F. and Das, S. and Neuman, K. C.},
+  title   = {Coarse-Grained Modeling of {DNA} Plectoneme Formation in the Presence of Base-Pair Mismatches},
+  journal = {Nucleic Acids Research},
+  year    = {2020},
+  doi     = {10.1093/nar/gkaa836}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2019</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Chromosome Disentanglement Driven Via Optimal Compaction of Loop-Extruded Brush Structures</div>
+          <div class="pub-badge">PNAS · 2019</div>
+          <div class="pub-auth-sm">S. Brahmachari and J.F. Marko</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/brahmachari-pnas2019.png" alt=""> -->
+        <p class="pub-abs">We analyze a model in which type-II topoisomerase permits topology fluctuations between sister chromosomes modeled as polymer loop arrays, where SMC-driven loop extrusion controls compaction. Interchromosome entanglements are minimized at an optimal loop size — too few loops leave chromosomes entangled, too many create new ones — defining an optimal compaction level for disentanglement. This optimal loop size corresponds to those observed in mitotic chromosomes, establishing a physical link between compaction geometry and topological disentanglement.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1073/pnas.1906355116" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/31757850/" target="_blank">PubMed</a>
+        
+          <a href="publications/Brahmachari-Marko-PNAS-2019.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Marko JF. Chromosome Disentanglement Driven Via Optimal Compaction of Loop-Extruded Brush Structures. <em>Proc Natl Acad Sci USA</em>. 2019. doi:10.1073/pnas.1906355116</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2019,
+  author  = {Brahmachari, Sumitabha and Marko, J. F.},
+  title   = {Chromosome Disentanglement Driven Via Optimal Compaction of Loop-Extruded Brush Structures},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2019},
+  doi     = {10.1073/pnas.1906355116}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2018</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Defect-Facilitated Buckling in Supercoiled Double-Helix DNAs</div>
+          <div class="pub-badge">Physical Review E · 2018</div>
+          <div class="pub-auth-sm">S. Brahmachari, A. Dittmore, Y. Takagi, K.C. Neuman, and J.F. Marko</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/brahmachari-pre2018.png" alt=""> -->
+        <p class="pub-abs">We develop a statistical-mechanical model for stretched, twisted DNA and find that an immobile point defect pins a plectoneme domain by nucleating a kinked end-loop, with a single unpaired base lowering the bending energy by approximately 0.7 k<sub>B</sub>T. The model predicts two distinct buckling signatures — buckling and rebuckling — in supercoiled DNA with a base-unpaired region, in quantitative agreement with magnetic tweezers experiments. These results explain how sequence anomalies become preferred sites of DNA plectoneme formation.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1103/PhysRevE.97.022416" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/29548184/" target="_blank">PubMed</a>
+        
+          <a href="publications/Brahmachari-etal-PRE-2018.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Dittmore A, Takagi Y, et al. Defect-Facilitated Buckling in Supercoiled Double-Helix DNAs. <em>Phys Rev E</em>. 2018. doi:10.1103/PhysRevE.97.022416</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2018pre,
+  author  = {Brahmachari, Sumitabha and Dittmore, A. and Takagi, Y. and Neuman, K. C. and Marko, J. F.},
+  title   = {Defect-Facilitated Buckling in Supercoiled Double-Helix {DNAs}},
+  journal = {Physical Review E},
+  year    = {2018},
+  doi     = {10.1103/PhysRevE.97.022416}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">DNA Mechanics and Topology</div>
+          <div class="pub-badge">Book chapter · 2018</div>
+          <div class="pub-auth-sm">S. Brahmachari and J.F. Marko &nbsp;·&nbsp; Biomechanics in Oncology, Springer</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/brahmachari-chapter2018.png" alt=""> -->
+        <p class="pub-abs">This review covers the physical mechanics of DNA — bending, twisting, and stretching — as revealed by single-molecule experiments interpreted through polymer statistical mechanics. We discuss how topological constraints including supercoiling and entanglement shape biological processes, and how DNA-binding proteins and compaction machinery alter effective chromatin mechanics. The chapter concludes by connecting these physical properties to cancer biology, including the mechanical consequences of mutations and the role of topological stress in cancer cell function.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/978-3-319-95294-9_2" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/30368746/" target="_blank">PubMed</a>
+        
+          <a href="publications/Brahmachari-Marko-Springer-2018.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Marko JF. DNA Mechanics and Topology. In: <em>Biomechanics in Oncology</em>. Springer; 2018. doi:10.1007/978-3-319-95294-9_2</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@incollection{Brahmachari2018springer,
+  author    = {Brahmachari, Sumitabha and Marko, J. F.},
+  title     = {{DNA} Mechanics and Topology},
+  booktitle = {Biomechanics in Oncology},
+  publisher = {Springer},
+  year      = {2018},
+  doi       = {10.1007/978-3-319-95294-9_2}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <p class="year-heading">2017</p>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Nucleation of Multiple Buckled Structures in Intertwined DNA Double Helices</div>
+          <div class="pub-badge">Physical Review Letters · 2017</div>
+          <div class="pub-auth-sm">S. Brahmachari*, K.H. Gunn*, R.D. Giuntoli, A. Mondragon, and J.F. Marko</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/brahmachari-prl2017a.png" alt=""> -->
+        <p class="pub-abs">Using magnetic tweezers on DNA braids, we find that torsionally stressed braids supercoil through an abrupt buckling transition and that the buckled state is characterized by a proliferation of multiple plectoneme domains — qualitatively distinct from the behavior of supercoiled single DNAs. We attribute these differences to the increased structural bulkiness of braided DNA, which alters the energetics of plectoneme nucleation and growth, and a statistical-mechanical model captures all observed features. These results reveal how the mechanical properties of intertwined DNA structures differ fundamentally from individual double helices.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1103/PhysRevLett.119.188103" target="_blank">DOI</a>
+        
+          <a href="publications/Brahmachari-etal-PRL-2017.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Gunn KH, Giuntoli RD, et al. Nucleation of Multiple Buckled Structures in Intertwined DNA Double Helices. <em>Phys Rev Lett</em>. 2017. doi:10.1103/PhysRevLett.119.188103</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2017prl,
+  author  = {Brahmachari, Sumitabha and Gunn, K. H. and Giuntoli, R. D. and Mondragon, A. and Marko, J. F.},
+  title   = {Nucleation of Multiple Buckled Structures in Intertwined {DNA} Double Helices},
+  journal = {Physical Review Letters},
+  year    = {2017},
+  doi     = {10.1103/PhysRevLett.119.188103}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Supercoiling Locates Mismatches</div>
+          <div class="pub-badge">Physical Review Letters · 2017</div>
+          <div class="pub-auth-sm">A. Dittmore, S. Brahmachari, Y. Takagi, J.F. Marko, and K.C. Neuman</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/dittmore-prl2017.png" alt=""> -->
+        <p class="pub-abs">Using magnetic tweezers, we show that imposed supercoiling detects base-pair mismatches with sensitivity to a single mismatched base pair in a molecule of several thousand base pairs. Under conditions of high salt and moderate tension, a single plectoneme nucleates and is stably pinned at the mismatch; from extension measurements and statistical-mechanical calculations we estimate the pinning energy and extrapolate to physiological conditions. These results suggest that DNA supercoiling could contribute to mismatch and damage sensing in vivo.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1103/PhysRevLett.119.147801" target="_blank">DOI</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/29053317/" target="_blank">PubMed</a>
+        
+          <a href="publications/Dittmore-etal-PRL-2017.pdf">PDF</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Dittmore A, Brahmachari S, Takagi Y, et al. Supercoiling Locates Mismatches. <em>Phys Rev Lett</em>. 2017. doi:10.1103/PhysRevLett.119.147801</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Dittmore2017,
+  author  = {Dittmore, A. and Brahmachari, S. and Takagi, Y. and Marko, J. F. and Neuman, K. C.},
+  title   = {Supercoiling Locates Mismatches},
+  journal = {Physical Review Letters},
+  year    = {2017},
+  doi     = {10.1103/PhysRevLett.119.147801}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pub-accordion">
+      <summary>
+        <span class="pub-chev">›</span>
+        <div class="pub-hd">
+          <div class="pub-ttl">Torque and Buckling in Stretched Intertwined Double-Helix DNAs</div>
+          <div class="pub-badge">Physical Review E · 2017</div>
+          <div class="pub-auth-sm">S. Brahmachari and J.F. Marko</div>
+        </div>
+      </summary>
+      <div class="pub-exp">
+        <!-- <img class="pub-fig" src="images/pubs/brahmachari-pre2017.png" alt=""> -->
+        <p class="pub-abs">We present a statistical-mechanical model for stretched intertwined DNA molecules computing torque and extension as a function of catenation number and applied force, finding good agreement with available experimental data. The model predicts a catenation-dependent effective twist modulus distinct from single-DNA behavior, and finds that the post-buckling state consists of multiple small plectoneme structures with a salt-dependence opposite to that of single supercoiled DNAs. These results provide a quantitative framework for interpreting magnetic tweezers experiments on DNA braids and reveal how catenation alters buckled DNA topology.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1103/PhysRevE.95.052401" target="_blank">DOI</a>
+          <a href="#" class="bib-toggle" onclick="toggleBib(this);return false;">Cite</a>
+        </div>
+        <div class="cite-block">
+          <div class="cite-section">
+            <div class="cite-fmt-label">Citation</div>
+            <div class="cite-plain">Brahmachari S, Marko JF. Torque and Buckling in Stretched Intertwined Double-Helix DNAs. <em>Phys Rev E</em>. 2017. doi:10.1103/PhysRevE.95.052401</div>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+          <div class="cite-section">
+            <div class="cite-fmt-label">BibTeX</div>
+            <pre class="cite-pre">@article{Brahmachari2017pre,
+  author  = {Brahmachari, Sumitabha and Marko, J. F.},
+  title   = {Torque and Buckling in Stretched Intertwined Double-Helix {DNAs}},
+  journal = {Physical Review E},
+  year    = {2017},
+  doi     = {10.1103/PhysRevE.95.052401}
+}</pre>
+            <button class="bib-copy" onclick="copySection(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </section>
+
+</main>
+
+<footer>
+  <span class="footer-text">© 2026 Brahmachari Lab</span>
+  <span class="footer-text">brahmachari-lab.github.io</span>
+</footer>
+
+</body>
+</html>

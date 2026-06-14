@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brahmachari Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">brahmachari<span>-lab</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="join.html">Join</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inst">Department of Biochemistry and Molecular Biology · The University of Texas Medical Branch, Galveston, TX</div>
+    <h1>Physics of the living genome</h1>
+    <p class="lead">
+      We combine concepts of statistical physics, numerical techniques, dynamics simulations, and AI models with experimental data to learn the physics connecting DNA structure and function.
+    </p>
+    <div class="tag-row">
+      <span class="tag">DNA structure</span>
+      <span class="tag">DNA supercoiling</span>
+      <span class="tag">molecular dynamics</span>
+      <span class="tag">statistical physics</span>
+      <span class="tag">data-driven modeling</span>
+    </div>
+  </section>
+
+  <!-- Research overview -->
+  <section>
+    <div class="section-label">Research</div>
+    <div class="cards">
+      <a href="research.html#energy-landscape" class="card">
+        <img src="images/home_research_card1.png" alt="Energy landscape modeling" class="card-img">
+        <h3>Energy landscape modeling</h3>
+        <p>Statistical mechanics frameworks for genome folding, chromosome architecture, and DNA topology</p>
+        <span class="card-link">Read more →</span>
+      </a>
+      <a href="research.html#nonequilibrium" class="card">
+        <img src="images/home_research_card2.png" alt="Active mechanisms" class="card-img">
+        <h3>Active mechanisms</h3>
+        <p>Active forces, motor-driven dynamics, and out-of-equilibrium physics of living chromatin</p>
+        <span class="card-link">Read more →</span>
+      </a>
+      <a href="research.html#physics-ai" class="card">
+        <img src="images/home_research_card3.png" alt="Physics-based AI" class="card-img">
+        <h3>Physics-based AI</h3>
+        <p>AI models grounded in physical principles to predict and interpret genome structure and dynamics</p>
+        <span class="card-link">Read more →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured publications -->
+  <section>
+    <div class="section-label">Recent publications</div>
+    <div class="pub-featured">
+
+      <div class="pub-card" onclick="openPub('pub-2026-1')">
+        <img src="images/Brahmachari-etal-PNAS2026.png" alt="" class="pub-card-img">
+        <div class="pub-card-title">Exploring the Energy Landscape of Bacterial Chromosome Segregation</div>
+        <div class="pub-card-badge">PNAS · 2026</div>
+      </div>
+
+      <div class="pub-card" onclick="openPub('pub-2025-1')">
+        <img src="images/Hwang-etal-NatureComm2025.png" alt="" class="pub-card-img">
+        <div class="pub-card-title">DNA Supercoiling-Mediated G4/R-loop Formation Tunes Transcription by Controlling the Access of RNA Polymerase</div>
+        <div class="pub-card-badge">Nature Commun · 2025</div>
+      </div>
+
+      <div class="pub-card" onclick="openPub('pub-2024-1')">
+        <img src="images/Brahmachari-etal-PNAS2024.png" alt="" class="pub-card-img">
+        <div class="pub-card-title">Nucleosomes Play a Dual Role in Regulating Transcription Dynamics</div>
+        <div class="pub-card-badge">PNAS · 2024</div>
+      </div>
+
+      <div class="pub-card" onclick="openPub('pub-2024-2')">
+        <img src="images/Brahmachari-etal-PRXLife2024.png" alt="" class="pub-card-img">
+        <div class="pub-card-title">Temporally Correlated Active Forces Drive Segregation and Enhanced Dynamics in Chromosome Polymers</div>
+        <div class="pub-card-badge">PRX Life · 2024</div>
+      </div>
+
+    </div>
+    <p style="margin-top:14px; font-size:13px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;">
+      <a href="publications.html">View all publications →</a>
+    </p>
+    <script>
+      function openPub(id) {
+        window.location.href = 'publications.html?open=' + id + '#' + id;
+      }
+    </script>
+  </section>
+
+  <!-- About / Join -->
+  <section>
+    <div class="index-link-row">
+      <a href="people.html" class="index-link-card">
+        <div>
+          <div class="section-label" style="margin-bottom:6px;">The lab</div>
+          <div class="index-link-title">About us</div>
+        </div>
+        <span class="index-link-arrow">→</span>
+      </a>
+      <a href="join.html" class="index-link-card">
+        <div>
+          <div class="section-label" style="margin-bottom:6px;">We are hiring</div>
+          <div class="index-link-title">Open positions</div>
+        </div>
+        <span class="index-link-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section>
+    <div class="section-label">News</div>
+    <div class="news-list">
+      <div class="news-item">
+        <span class="news-date">2026 Jun</span>
+        <span class="news-text">Lab opens at UTMB</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="footer-text">© 2026 Brahmachari Lab</span>
+  <span class="footer-text">brahmachari-lab.github.io</span>
+</footer>
+
+</body>
+</html>
