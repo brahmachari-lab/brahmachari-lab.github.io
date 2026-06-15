@@ -127,7 +127,7 @@ p:last-child { margin-bottom: 0; }
 
 .hero-inst {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #7e7a9e;
   letter-spacing: 0.2px;
   margin-bottom: 18px;
@@ -668,6 +668,28 @@ details.pub-accordion[open] > summary .pub-chev { transform: rotate(90deg); }
 .research-section { padding: 36px 0; border-bottom: 1px solid var(--border-lt); }
 .research-section:last-of-type { border-bottom: none; }
 .research-section h2 { margin-bottom: 14px; }
+.research-pubs { margin-top: 18px; }
+.research-pubs-label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 8px;
+}
+.research-pubs ul { list-style: none; padding: 0; margin: 0; }
+.research-pubs li {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--text-3);
+  padding: 4px 0;
+  border-top: 1px solid var(--border-lt);
+}
+.research-pubs li:first-child { border-top: none; }
+.research-pubs li a { color: var(--accent); text-decoration: none; }
+.research-pubs li a:hover { text-decoration: underline; }
+.research-pubs .pub-meta { color: var(--text-4); margin-left: 4px; }
 
 /* ── Footer ──────────────────────────────── */
 footer {
